@@ -52,7 +52,7 @@ const config = {
   "mailTemplate": 'mailto:?subject=File Transfer&body=You can download the files here: %%URL%%',
   // see https://github.com/expressjs/morgan
   // set to false to disable logging
-  "accessLog": ':date[iso] :method :url :status :response-time :remote-addr',
+  "accessLog": false,
   // event webhooks
   // invokes an HTTP POST to a url whenever a file is downloaded
   // for more info, see the webhooks section of docs/configuration.md
@@ -61,8 +61,8 @@ const config = {
   // Fallback language
   "defaultLanguage": "en",
   // Limit upload size
-  "maxFileSize": null, // Math.pow(2, 30) * 2, // 2GB
-  "maxBucketSize": null, // Math.pow(2, 30) * 2, // 10GB
+  "maxFileSize": Math.pow(2, 30) * 2, // Math.pow(2, 30) * 2, // 2GB
+  "maxBucketSize": Math.pow(2, 30) * 2, // Math.pow(2, 30) * 2, // 10GB
   "plugins": ['file-downloaded-webhook', 'file-uploaded-webhook'],
 };
 
