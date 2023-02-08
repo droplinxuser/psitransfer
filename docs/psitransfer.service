@@ -12,7 +12,7 @@ Environment=NODE_ENV=production
 Environment=PSITRANSFER_PORT=8080
 
 WorkingDirectory=/var/www/psitransfer
-ExecStart=/usr/bin/node app.js
+ExecStart=/usr/bin/node /var/www/psitransfer/app.js
 
 [Install]
 WantedBy=multi-user.target
