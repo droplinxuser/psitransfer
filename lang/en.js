@@ -48,11 +48,9 @@ module.exports = {
     "3600": "1 Hour",
     "86400": "1 Day",
     "604800": "1 Week",
-    "1209600": "2 Weeks",
     "2630000": "1 Month",
     "7890000": "3 Months",
-    "15780000": "6 Months",
-    "63072000": "2 Years"
+    "15780000": "6 Months"
   },
   uploadPassword: "Password for uploading",
 }
