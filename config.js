@@ -26,13 +26,10 @@ const config = {
   "retentions": {
     "one-time": "one time download",
     "3600": "1 Hour",
-    "21600": "6 Hours",
     "86400": "1 Day",
-    "259200": "3 Days",
     "604800": "1 Week",
     "1209600": "2 Weeks",
-    "2419200": "4 Weeks",
-    "4838400": "8 Weeks",
+    "2630000": "1 Month",
     "7890000": "3 Months",
     "15780000": "6 Months"
   },
