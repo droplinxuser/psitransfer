@@ -9,7 +9,7 @@ User=psitransfer
 Restart=on-failure
 
 Environment=NODE_ENV=production
-Environment=PSITRANSFER_PORT=8080
+Environment=PSITRANSFER_PORT=3000
 
 WorkingDirectory=/var/www/psitransfer
 ExecStart=/usr/bin/node /var/www/psitransfer/app.js
