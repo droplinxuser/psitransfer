@@ -57,7 +57,7 @@ const config = {
   // Fallback language
   "defaultLanguage": "en",
   // Limit upload size
-  "maxFileSize": Math.pow(2, 30) * 5, // 5GB
+  "maxFileSize": Math.pow(2, 30) * 1, // 1GB
   "maxBucketSize": Math.pow(2, 30) * 1024, // 1TB
   "plugins": ['file-downloaded-webhook', 'file-uploaded-webhook'],
 };
