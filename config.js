@@ -30,7 +30,9 @@ const config = {
     "604800": "1 Week",
     "2630000": "1 Month",
     "7890000": "3 Months",
-    "15780000": "6 Months"
+    "15780000": "6 Months",
+    "31536000": "1 Year",
+    "157680000": "5 Years"
   },
   // admin password, set to false to disable /admin page
   "adminPass": false,
