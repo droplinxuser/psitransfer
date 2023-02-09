@@ -35,7 +35,7 @@ const config = {
     "157680000": "5 Years"
   },
   // admin password, set to false to disable /admin page
-  "adminPass": false,
+  "adminPass": 'temppasswordonly',
   // upload password, set to false to disable
   "uploadPass": false,
   // make the bucket-password field mandatory
