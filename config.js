@@ -11,7 +11,7 @@ const config = {
   "baseUrl": '/',
   // use to set custom upload url (subfolder to baseUrl)
   "uploadAppPath": '/',
-  "iface": '0.0.0.0',
+  "iface": '127.0.0.1',
   // set to false to disable HTTP
   "port": 3000,
   // HTTPS, set all 3 values to enable
