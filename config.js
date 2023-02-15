@@ -31,7 +31,7 @@ const config = {
     "2630000": "1 Month",
     "15780000": "6 Months",
     "31536000": "1 Year",
-    "157680000": "5 Years"
+    "189216000": "6 Years"
   },
   // admin password, set to false to disable /admin page
   "adminPass": 'temppasswordonly',
