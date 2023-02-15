@@ -27,6 +27,7 @@
             th Downloaded
             th Expire
             th Size
+            th Actions
         template(v-for="(bucket, sid) in db")
           tbody(:class="{expanded: expand===sid}")
             tr.bucket(@click="expandView(sid)")
