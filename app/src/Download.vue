@@ -67,7 +67,7 @@
   import 'vue-awesome/icons/key';
   import 'vue-awesome/icons/eye';
 
-  function getPreviewType(file, maxSize) {
+  function getPreviewType(file, maxSize, previewVideos) {
     if(!file || !file.metadata) return false;
     if(file.metadata.retention === 'one-time') return false;
     // no preview for files size > 2MB
