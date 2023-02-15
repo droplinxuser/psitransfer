@@ -3,7 +3,10 @@
     .panel.panel-default(:class="{'panel-primary': !disabled}")
       .panel-heading
         span.pull-right(v-show="bucketSize > 0") {{ humanFileSize(bucketSize) }}
-        strong {{ $root.lang.files }}
+        strong(v-if="$root.maxBucketSize && !$root.maxFileSize") {{ $root.lang.files }} ({{ $root.lang.maxBucketSize }} {{ humanFileSize($root.maxBucketSize) }})
+        strong(v-else-if="!$root.maxBucketSize && $root.maxFileSize") {{ $root.lang.files }} ({{ $root.lang.maxFileSize }} {{ humanFileSize($root.maxFileSize) }})
+        strong(v-else-if="$root.maxBucketSize && $root.maxFileSize") {{ $root.lang.files }} ({{ $root.lang.maxFileSize }} {{ humanFileSize($root.maxFileSize) }}, {{ $root.lang.maxBucketSize }} {{ humanFileSize($root.maxBucketSize) }})
+        strong(v-else) {{ $root.lang.files }}
       .panel-body
         .empty-files-big-plus(:style="{cursor: disabled ? 'default' : 'pointer'}",
           onclick="document.getElementById('fileInput').click();",
