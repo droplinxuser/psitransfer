@@ -60,6 +60,9 @@
                   template(v-if="typeof file.expireDate === 'number'") {{ file.expireDate | date }}
                   template(v-else) {{ file.expireDate }}
                 td.text-right {{ humanFileSize(file.size) }}
+                td
+                  a.text-danger(@click="deleteFile(file.metadata.sid, file.metadata.key)", title="Delete file")
+                    icon(name="trash")
         tfoot
           tr
             td(colspan="3")
