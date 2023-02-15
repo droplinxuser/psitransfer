@@ -174,6 +174,25 @@
         return Math.max(fileSizeInBytes, 0.00).toFixed(2) + byteUnits[i];
       },
 
+      deleteFile(sid, key, bucketDelete = false) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('DELETE', this.$root.baseURI + 'delete');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('x-passwd', this.password);
+        xhr.send(JSON.stringify({'sid': sid, 'key': key, 'bucketDelete': bucketDelete}));
+        xhr.onload = () => {
+          if(xhr.status === 200) {
+            try {
+              this.login();
+            } catch(e) {
+              this.error = e.toString();
+            }
+          } else {
+            this.error = `${xhr.status} ${xhr.statusText}: ${xhr.responseText}`;
+          }
+        };
+      },
+
     },
 
 
