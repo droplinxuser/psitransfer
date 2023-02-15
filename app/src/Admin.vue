@@ -77,6 +77,8 @@
   import 'vue-awesome/icons/sync-alt';
   import 'vue-awesome/icons/sign-in-alt';
   import 'vue-awesome/icons/key';
+  import 'vue-awesome/icons/folder-open';
+  import 'vue-awesome/icons/trash';
 
 
   export default {
