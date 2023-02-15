@@ -43,8 +43,8 @@ module.exports = {
   mailSubjectUploader: "PsiTransfer File-Upload",
   mailSubjectDownloader: "PsiTransfer File-Download",
   mailSubjectFileDownloaded: "File has been downloaded",
-  maxFileSize: "Max file:",
-  maxBucketSize: "Max bucket:",
+  maxFileSize: "max file:",
+  maxBucketSize: "max bucket:",
   retentions: {
     "one-time": "one time download",
     "3600": "1 Hour",
