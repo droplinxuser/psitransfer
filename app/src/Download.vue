@@ -103,7 +103,7 @@
 
     computed: {
       downloadsAvailable: function() {
-        return this.files.filter(f => !f.downloaded || f.metadata.retention !== 'one-time').length > 0
+        return this.files.filter(f => !f.downloaded || f.metadata.retention !== 'one-time').length > 0 && this.files.length > 1;
       },
       previewFiles: function() {
         return this.files.filter(f => !!f.previewType);
