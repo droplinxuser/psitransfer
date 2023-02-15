@@ -179,7 +179,7 @@
               this.files = data.items.map(f => {
                 return Object.assign(f, {
                   downloaded: false,
-                  previewType: getPreviewType(f, this.config.maxPreviewSize)
+                  previewType: getPreviewType(f, this.config.maxPreviewSize, this.config.previewVideos)
                 });
               });
               this.loading = false;
