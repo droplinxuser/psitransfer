@@ -86,6 +86,7 @@
 
     data () {
       return {
+        baseURI: this.$root.baseURI,
         db: {},
         sum: {},
         loggedIn: false,
