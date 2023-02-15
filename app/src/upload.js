@@ -14,6 +14,8 @@ new Vue({
     baseURI: document.head.getElementsByTagName('base')[0].href.replace(/\/$/),
     configFetched: false,
     lang: {},
+    maxFileSize: false,
+    maxBucketSize: false,
   },
   store,
   render: h => h(Upload),
