@@ -39,7 +39,7 @@ const config = {
   "uploadPass": false,
   // make the bucket-password field mandatory
   "requireBucketPassword": false,
-  "defaultRetention": "31536000",
+  "defaultRetention": "15780000",
   // expire every file after maxAge (eg never downloaded one-time files)
   "maxAge": 3600 * 24 * 30, // 30 days
   // maximum file-size for previews in byte
