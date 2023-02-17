@@ -53,7 +53,7 @@ module.exports = {
     "2630000": "1 Month",
     "15780000": "6 Months",
     "31536000": "1 Year",
-    "189216000": "6 Years"
+    "315360000": "10 Years"
   },
   uploadPassword: "Password for uploading",
 }
