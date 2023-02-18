@@ -15,7 +15,7 @@ module.exports = {
   accessDenied: "Access denied!",
   login: "Login",
   email: "E-Mail",
-  clipboard: "Copy",
+  clipboard: "Copy link",
   copyToClipboard: "Copy to clipboard",
   sendViaMail: "Send via E-Mail",
   showQrCode: "Show QR-Code",
