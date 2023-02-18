@@ -16,7 +16,7 @@ module.exports = {
   login: "Login",
   email: "E-Mail",
   clipboard: "Copy link",
-  copyToClipboard: "Copy download link to clipboard",
+  copyToClipboard: "Copy the download link to your clipboard",
   sendViaMail: "Send via E-Mail",
   showQrCode: "Show QR-Code",
   uploadCompleted: "Upload completed",
