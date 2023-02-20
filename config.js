@@ -7,8 +7,6 @@ const fsp = require('fs-promise');
 // or use ENV-VARS like PSITRANSFER_PORT=8000
 const config = {
   "uploadDir": '/var/www/psi_data',
-  // modify each build
-  "cacheBusterDrop": 'monfeb201204pm',
   // set to serve PsiTransfer from a sub-path
   "baseUrl": '/',
   // use to set custom upload url (subfolder to baseUrl)
