@@ -25,7 +25,7 @@
                   strong  {{ file.name }}
                   small  ({{ file.humanSize }})
                 p
-                  input.form-control.input-sm(type="text", :placeholder="$root.lang.comment", v-model="file.comment", :disabled="disabled")
+                  input.form-control.input-sm(type="text", maxlength="280", :placeholder="$root.lang.comment", v-model="file.comment", :disabled="disabled")
                 .alert.alert-danger(v-if="file.error")
                   icon.fa-fw(name="exclamation-triangle")
                   |  {{ file.error }}
