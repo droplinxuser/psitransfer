@@ -2,11 +2,15 @@
 Description=PsiTransfer
 Documentation=https://github.com/psi-4ward/psitransfer
 After=network.target
+StartLimitIntervalSec=30
+StartLimitBurst=5
 
 [Service]
 Type=simple
 User=psitransfer
-Restart=on-failure
+Restart=always
+RestartSec=5s
+LimitNOFILE=524288
 
 Environment=NODE_ENV=production
 Environment=PSITRANSFER_PORT=3000
