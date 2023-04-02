@@ -41,7 +41,7 @@ const config = {
   "requireBucketPassword": false,
   "defaultRetention": "31536000",
   // expire every file after maxAge (eg never downloaded one-time files)
-  "maxAge": 3600 * 24 * 730, // 730 days
+  "maxAge": 3600 * 24 * 3650, // 3650 days or 10 years
   // maximum file-size for previews in byte
   "maxPreviewSize": Math.pow(2, 20) * 1, // 1MB
   // preview videos, set to 1 to enable (experimental! - connection seems to not be closed afterwards)
