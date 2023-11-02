@@ -61,6 +61,8 @@ const config = {
   "maxFileSize": Math.pow(2, 30) * 2, // 2GB
   "maxBucketSize": Math.pow(2, 30) * 4, // 4GB
   "plugins": ['file-downloaded-webhook', 'file-uploaded-webhook'],
+  // Disable the QR code button for download url sharing, set to true to disable
+  "disableQrCode": false,
 };
 
 // Load NODE_ENV specific config
