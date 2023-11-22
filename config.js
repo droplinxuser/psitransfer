@@ -58,7 +58,7 @@ const config = {
   // Fallback language
   "defaultLanguage": "en",
   // Limit upload size
-  "maxFileSize": Math.pow(2, 30) * 2, // 512MB
+  "maxFileSize": Math.pow(2, 29) * 1, // 512MB
   "maxBucketSize": Math.pow(2, 30) * 1, // 1GB
   "plugins": ['file-downloaded-webhook', 'file-uploaded-webhook'],
   // Disable the QR code button for download url sharing, set to true to disable
