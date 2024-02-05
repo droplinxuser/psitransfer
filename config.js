@@ -43,7 +43,7 @@ const config = {
   // expire every file after maxAge (eg never downloaded one-time files)
   "maxAge": 3600 * 24 * 1825, // 1825 days or 5 years
   // maximum file-size for previews in byte
-  "maxPreviewSize": Math.pow(2, 20) * 5, // 5MB
+  "maxPreviewSize": Math.pow(2, 20) * 1, // 1MB
   // preview videos, set to 1 to enable (experimental! - connection seems to not be closed afterwards)
   "previewVideos": 1,
   "mailTemplate": 'mailto:?subject=File Transfer&body=You can download the files here: %%URL%%',
