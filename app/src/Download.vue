@@ -176,7 +176,7 @@
               this.files = data.items.map(f => {
                 return Object.assign(f, {
                   downloaded: false,
-                  previewType: getPreviewType(f, this.config.maxPreviewSize, this.config.previewVideos)
+                  previewType: getPreviewType(f, this.config.maxPreviewSize)
                 });
               });
               this.loading = false;
