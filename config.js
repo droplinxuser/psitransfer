@@ -44,8 +44,6 @@ const config = {
   "maxAge": 3600 * 24 * 1825, // 1825 days or 5 years
   // maximum file-size for previews in byte
   "maxPreviewSize": Math.pow(2, 20) * 1, // 1MB
-  // preview videos, set to 1 to enable (experimental! - connection seems to not be closed afterwards)
-  "previewVideos": 1,
   "mailTemplate": 'mailto:?subject=File Transfer&body=You can download the files here: %%URL%%',
   // see https://github.com/expressjs/morgan
   // set to false to disable logging
