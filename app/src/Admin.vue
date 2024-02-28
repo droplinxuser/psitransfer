@@ -41,7 +41,7 @@
                 template(v-if="typeof sum[sid].firstExpire === 'number'") {{ sum[sid].firstExpire | date }}
                 template(v-else)  {{ sum[sid].firstExpire }}
               td.text-right {{ humanFileSize(sum[sid].size) }}
-            tbody.expanded(v-if="expand === sid")
+          tbody.expanded(v-if="expand === sid")
             template(v-for="file in bucket")
               tr.file
                 td {{ file.metadata.name }}
