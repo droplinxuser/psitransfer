@@ -57,7 +57,6 @@
           tr
             td(colspan="3")
             td.text-right(colspan="2") Sum: {{ humanFileSize(sizeSum) }}
-            td
 
 </template>
 
