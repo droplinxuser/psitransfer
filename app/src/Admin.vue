@@ -41,13 +41,7 @@
                 template(v-if="typeof sum[sid].firstExpire === 'number'") {{ sum[sid].firstExpire | date }}
                 template(v-else)  {{ sum[sid].firstExpire }}
               td.text-right {{ humanFileSize(sum[sid].size) }}
-              td
-                a(:href="baseURI + sid", title="Open bucket", target="_blank")
-                  icon(name="folder-open")
-                |
-                a.text-danger(@click="deleteFile(sid, '', true)", title="Delete bucket")
-                  icon(name="trash")
-          tbody.expanded(v-if="expand === sid")
+            tbody.expanded(v-if="expand === sid")
             template(v-for="file in bucket")
               tr.file
                 td {{ file.metadata.name }}
