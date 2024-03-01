@@ -1,5 +1,5 @@
 module.exports = {
-  langCode: "de",
+  langCode: "en",
   oldBrowserError: "Your browser is too old and does not support this function.",
   dropFilesHere: "Drop your files here",
   noPreviewAvailable: "No preview available",
@@ -43,8 +43,6 @@ module.exports = {
   mailSubjectUploader: "PsiTransfer File-Upload",
   mailSubjectDownloader: "PsiTransfer File-Download",
   mailSubjectFileDownloaded: "File has been downloaded",
-  maxFileSize: "max file:",
-  maxBucketSize: "max bucket:",
   retentions: {
     "one-time": "one time download",
     "3600": "1 Hour",
