@@ -42,7 +42,7 @@ const config = {
   "requireBucketPassword": false,
   "defaultRetention": "86400",
   // expire every file after maxAge (eg never downloaded one-time files)
-  "maxAge": 3600 * 24 * 1825, // 1825 days or 5 years
+  "maxAge": 3600 * 24 * 365, // 365 days or 1 year
   // maximum file-size for previews in byte
   "maxPreviewSize": Math.pow(1, 1) * 1, // 1Byte
   "mailTemplate": 'mailto:?subject=File Transfer&body=You can download the files here: %%URL%%',
