@@ -1,6 +1,14 @@
 <template lang="pug">
   .upload-app#uploadApp
-    a.btn.btn-sm.btn-info.btn-new-session(v-if='!showLogin', @click='newSession()', :title='$root.lang.newUpload')
+    a.btn.btn-sm.btn-info.btn-new-session(
+      v-if='!showLogin',
+      @click='newSession()',
+      @keydown.enter.prevent='newSession()',
+      @keydown.space.prevent='newSession()',
+      :title='$root.lang.newUpload',
+      tabindex="-1",
+      role="button"
+    )
       icon.fa-fw(name="cloud-upload-alt")
       span.hidden-xs  {{ $root.lang.newUpload }}
     .alert.alert-danger(v-show="error")
@@ -20,13 +28,30 @@
     div(v-else-if="$root.configFetched")
       .well(v-show="state === 'uploaded'")
         .pull-right.btn-group.upload-success-btns
-          a.btn.btn-primary(v-if="!disableQrCode", @click.prevent="showQrCode" href="#" :title="$root.lang.showQrCode")
+          a.btn.btn-primary(
+            v-if="!disableQrCode",
+            @click.prevent="showQrCode",
+            @keydown.enter.prevent="showQrCode",
+            @keydown.space.prevent="showQrCode",
+            href="#",
+            :title="$root.lang.showQrCode",
+            tabindex="0",
+            role="button"
+          )
             icon.fa-fw(name="qrcode")
             | QR-Code
-          a.btn.btn-primary(:href="mailLnk" :title="$root.lang.sendViaMail")
+          a.btn.btn-primary(
+            :href="mailLnk",
+            :title="$root.lang.sendViaMail",
+            tabindex="0"
+          )
             icon.fa-fw(name="envelope")
             |  {{ $root.lang.email }}
-          clipboard.btn.btn-primary(:value='shareUrl' :title="$root.lang.copyToClipboard")
+          clipboard.btn.btn-primary(
+            :value='shareUrl',
+            :title="$root.lang.copyToClipboard",
+            tabindex="0"
+          )
         h3.text-success
           icon.fa-fw(name="check")
           |  {{ $root.lang.uploadCompleted }}
@@ -57,7 +82,7 @@
 </template>
 
 <script type="text/babel">
-  import { Encoder, ErrorCorrectionLevel, QRByte } from "@nuintun/qrcode";
+  import { Encoder, Byte } from "@nuintun/qrcode";
   import { mapState, mapGetters } from 'vuex';
 
   import Settings from './Upload/Settings.vue';
@@ -139,11 +164,7 @@
         }
       },
       showQrCode() {
-        const qrcode = new Encoder();
-        qrcode.setEncodingHint(true);
-        qrcode.setErrorCorrectionLevel(ErrorCorrectionLevel.H);
-        qrcode.write(new QRByte(this.shareUrl));
-        qrcode.make();
+        const qrcode = new Encoder({level: 'H'}).encode(new Byte(this.shareUrl));
         const imgSrc = qrcode.toDataURL(7, 10);
         const data = imgSrc.substr(imgSrc.indexOf(',') + 1);
         const byteCharacters = atob(data);
